@@ -1,0 +1,35 @@
+.btnStyle
+{
+  font-family: Arial;
+  color: white;
+  background-color: #4c9696;
+  height: 2.3em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btnStyle:hover {
+  background-color: white;
+  border: #4c9696 2px solid;
+  color: #4c9696;
+}
+
+.inputBar{
+  border-width: 0.08em;
+  border-color: darkgrey;
+}
+
+.modal {
+  position: fixed;
+  top: 20vh;
+  left: 40vw;
+  width: 20%;
+  background-color:  #f0f2f2;
+  padding: 1rem;
+  border-radius: 14px;
+  border: darkgrey!important;
+  border-width: 9px;
+  box-shadow: 0 2px 8px darkgrey;
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}

@@ -1,0 +1,62 @@
+.btnStyle
+{
+  font-family: Arial;
+  color: white;
+  background-color: #4c9696;
+  height: 2.3em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btnStyle:hover {
+  background-color: white;
+  border: #4c9696 2px solid;
+  color: #4c9696;
+}
+
+.centerInput {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  -ms-transform: translate(-43%, -50%);
+  transform: translate(-43%, -50%);
+}
+
+.centerLink {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.h1{
+  font-family: "Arial Rounded MT Bold";
+}
+.centerH1 {
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -ms-transform: translate(-50%, -35%);
+  transform: translate(-50%, -35%);
+}
+
+.buttonRight {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 72%;
+  -ms-transform: translate(-72%, -50%);
+  transform: translate(-72%, -50%);
+}
+
+.inputBar{
+  width: 40%;
+  border-radius: 0.4em;
+  border-color: #4c9696;
+  height: 2.3em;
+}
+
