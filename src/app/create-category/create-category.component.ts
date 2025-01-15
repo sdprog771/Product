@@ -10,11 +10,15 @@ export class CreateCategoryComponent {
   isModalVisible = false;
 
   showModal() {
+    console.log(this.isModalVisible);
     this.isModalVisible = true;
+    console.log(this.isModalVisible);
   }
 
   hideModal() {
+    console.log(this.isModalVisible);
     this.isModalVisible = false;
+    console.log(this.isModalVisible);
   }
 
 

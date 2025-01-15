@@ -18,18 +18,3 @@
   border-width: 0.08em;
   border-color: darkgrey;
 }
-
-.modal {
-  position: fixed;
-  top: 20vh;
-  left: 40vw;
-  width: 20%;
-  background-color:  #f0f2f2;
-  padding: 1rem;
-  border-radius: 14px;
-  border: darkgrey!important;
-  border-width: 9px;
-  box-shadow: 0 2px 8px darkgrey;
-  z-index: 30;
-  animation: slide-down 300ms ease-out forwards;
-}

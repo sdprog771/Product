@@ -9,7 +9,6 @@ export class NewCategoryModalComponent {
 
   @Output() close = new EventEmitter<void>();
 
-
   closeNewCategoryModal(): void {
     this.close.emit();
   }
