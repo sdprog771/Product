@@ -10,6 +10,7 @@ import { CreateCategoryComponent } from './create-category/create-category.compo
 import { HomePageComponent } from './home-page/home-page.component';
 import { FiltersComponent } from './filters/filters.component';
 import { NewCategoryModalComponent } from './new-category-modal/new-category-modal.component';
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NewCategoryModalComponent } from './new-category-modal/new-category-mod
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    CommonModule
   ],
   providers: [
     provideClientHydration()

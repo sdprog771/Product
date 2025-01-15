@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-new-category-modal',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class NewCategoryModalComponent {
 
+  @Output() close = new EventEmitter<void>();
+
+
+  closeNewCategoryModal(): void {
+    this.close.emit();
+  }
+
+  saveNewCategory(): void {
+
+  }
 }

@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class CreateCategoryComponent {
 
+  isModalVisible = false;
+
+  showModal() {
+    this.isModalVisible = true;
+  }
+
+  hideModal() {
+    this.isModalVisible = false;
+  }
+
+
+
 }
