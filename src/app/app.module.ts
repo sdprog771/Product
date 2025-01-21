@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FiltersComponent } from './filters/filters.component';
 import { NewCategoryModalComponent } from './new-category-modal/new-category-modal.component';
 import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CommonModule } from "@angular/common";
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()

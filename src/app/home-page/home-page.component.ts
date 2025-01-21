@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Product} from "../model/Product";
 
 @Component({
   selector: 'app-home-page',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  searchTokens: string[] = [];
+  searchResultList: Product[] = [];
+  hasTokens = false;
+
+  //to get filtered results
+  getSearchTokens(searchInput: string){
+    return this.searchTokens = searchInput.split(" ");
+  }
+
+  show(){
+    this.hasTokens = true;
+  }
 }

@@ -1,13 +1,10 @@
-class Category {
+export class Category {
 
-  private id: string;
+  public id: string;
   public name: string;
 
-  constructor(name: string) {
-    this.name = name;
-  }
-
-  set id(id:string){
+  constructor(id: string, name: string) {
     this.id = id;
+    this.name = name;
   }
 }

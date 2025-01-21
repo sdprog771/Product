@@ -1,11 +1,7 @@
 <div class="container justify-content-center w-50" >
 <h2 class="p-4 text-center">Κατηγορίες προϊόντων</h2>
 <ul class="list-group list-group-flush">
-  <li class="list-group-item" >Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
+  <li class="list-group-item" *ngFor="let categoryItem of categoryList">Κωδικός: {{categoryItem.id}} - Κατηγορία: {{categoryItem.name}}</li>
 </ul>
   <button type="button" class="btn btnStyle mt-3 mb-2" data-toggle="modal" data-target="#newCategoryModal" (click)="showModal()">Νέα κατηγορία</button>
   <app-new-category-modal *ngIf="isModalVisible" (close)="hideModal()"></app-new-category-modal>

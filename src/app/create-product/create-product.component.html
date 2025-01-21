@@ -3,7 +3,7 @@
   <form>
     <div class="form-group mb-3">
       <label for="productFormControlInput">Προϊόν</label>
-      <input class="form-control inputBar" id="productFormControlInput" />
+      <input class="form-control inputBar" id="productFormControlInput" #productName />
     </div>
 <!--    <div class="form-group mb-3">-->
 <!--      <label for="exampleFormControlSelect1">Category</label>-->
@@ -17,12 +17,12 @@
 <!--    </div>-->
     <div class="form-group">
       <label for="descriptionTextarea">Περιγραφή</label>
-      <textarea class="form-control inputBar" id="descriptionTextarea" rows="3"></textarea>
+      <textarea class="form-control inputBar" id="descriptionTextarea" rows="3" #description></textarea>
     </div>
     <div class="form-group mt-3">
       <label for="storageTextarea">Θέση αποθήκευσης</label>
-      <textarea class="form-control inputBar" id="storageTextarea" rows="1"></textarea>
+      <textarea class="form-control inputBar" id="storageTextarea" rows="1" #position></textarea>
     </div>
-    <button type="submit" class="btn btnStyle mt-3 mb-2">Αποθήκευση</button>
+    <button type="submit" class="btn btnStyle mt-3 mb-2" (click)="add(productName.value, description.value,position.value)">Αποθήκευση</button>
   </form>
 </div>

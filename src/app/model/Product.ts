@@ -1,15 +1,14 @@
-class Product {
+export class Product {
 
-  private id: string;
+  public id: string;
   public name: string;
   public description: string;
   public position: string;
 
-  constructor(name: string){
-    this.name = name;
-  }
-
-  set id(id:string){
+  constructor(id: string, name: string, description: string, position: string){
     this.id = id;
+    this.name = name;
+    this.description = description;
+    this.position = position;
   }
 }
