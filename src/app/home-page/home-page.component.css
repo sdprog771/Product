@@ -23,6 +23,16 @@
   transform: translate(-43%, -50%);
 }
 
+.centerTable {
+  margin: 0;
+  width: 55%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .centerLink {
   margin: 0;
   position: absolute;
@@ -53,10 +63,23 @@
   transform: translate(-72%, -50%);
 }
 
+.buttonTable {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 72%;
+  -ms-transform: translate(-72%, -50%);
+  transform: translate(-72%, -50%);
+}
+
 .inputBar{
   width: 40%;
   border-radius: 0.4em;
   border-color: #4c9696;
   height: 2.3em;
+}
+
+tr:nth-child(even) {
+  background-color: lightgrey;
 }
 

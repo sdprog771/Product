@@ -12,6 +12,7 @@ import { FiltersComponent } from './filters/filters.component';
 import { NewCategoryModalComponent } from './new-category-modal/new-category-modal.component';
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from "@angular/common/http";
     CreateCategoryComponent,
     HomePageComponent,
     FiltersComponent,
-    NewCategoryModalComponent
+    NewCategoryModalComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
