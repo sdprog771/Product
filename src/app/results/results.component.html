@@ -1,13 +1,14 @@
 <div class="container" routerLink="results">
-  <div>
-    <table class="table  centerTable table-striped mt-5" >
+  <div class="table-responsive">
+    <table class="table centerTable table-striped" >
       <thead>
-      <tr>
-        <th scope="col fw-bold" class="text-center">Κωδικός</th>
-        <th scope="col fw-bold" class="text-center">Προϊόν</th>
-        <th scope="col fw-bold" class="text-center">Περιγραφή</th>
-        <th scope="col fw-bold" class="text-center">Θέση αποθήκευσης</th>
-        <th scope="col fw-bold" class="text-center">Επεξεργασία</th>
+      <tr class="row-cols-6">
+        <th scope="col fw-bold" class="text-center col-1" style="color: #3e8a8a">Κωδικός</th>
+        <th scope="col fw-bold" class="text-center col-2" style="color: #3e8a8a">Προϊόν</th>
+        <th scope="col fw-bold" class="text-center col-3" style="color: #3e8a8a">Περιγραφή</th>
+        <th scope="col fw-bold" class="text-center col-2" style="color: #3e8a8a">Θέση αποθήκευσης</th>
+        <th scope="col fw-bold" class="text-center col-1"></th>
+        <th scope="col fw-bold" class="text-center col-1"></th>
       </tr>
       </thead>
       <!--    <tbody *ngIf="hasTokens">-->
@@ -26,8 +27,9 @@
         <td class="text-center">TestName</td>
         <td class="text-center">TestDescription</td>
         <td class="text-center">TestPosition</td>
-        <td class="text-center"><button class=" btn  btnStyle">Επεξεργασία</button></td>
-        <td></td>
+        <td class="text-center"><button class=" btn btnStyle">Επεξεργασία</button></td>
+        <td class="text-center"><button class="btnStyleDelete btn">Διαγραφή</button></td>
+
       </tr>
       <tr>
         <th scope="row" class="text-center">1</th>
@@ -35,7 +37,8 @@
         <td class="text-center">TestDescription</td>
         <td class="text-center">TestPosition</td>
         <td class="text-center"><button class="btnStyle btn">Επεξεργασία</button></td>
-        <td></td>
+        <td class="text-center"><button class="btnStyleDelete btn">Διαγραφή</button></td>
+
       </tr>
       <tr>
         <th scope="row" class="text-center">1</th>
@@ -43,7 +46,8 @@
         <td class="text-center">TestDescription</td>
         <td class="text-center">TestPosition</td>
         <td class="text-center"><button class="btnStyle btn">Επεξεργασία</button></td>
-        <td></td>
+        <td class="text-center"><button class="btnStyleDelete btn">Διαγραφή</button></td>
+
       </tr>
       <tr>
         <th scope="row" class="text-center">1</th>
@@ -51,7 +55,8 @@
         <td class="text-center">TestDescription</td>
         <td class="text-center">TestPosition</td>
         <td class="text-center"><button class="btnStyle btn">Επεξεργασία</button></td>
-        <td></td>
+        <td class="text-center"><button class="btnStyleDelete btn">Διαγραφή</button></td>
+
       </tr>
       </tbody>
 

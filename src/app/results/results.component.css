@@ -7,9 +7,35 @@
   transition-duration: 0.4s;
   cursor: pointer;
 }
+.btnStyle:hover {
+  background-color: white;
+  border: #4c9696 1px solid;
+  color: #4c9696;
+}
 
-/*.btnStyle:hover {*/
-/*  background-color: white;*/
-/*  border: #4c9696 2px solid;*/
-/*  color: #4c9696;*/
-/*}*/
+.btnStyleDelete
+{
+  font-family: Arial;
+  color: white;
+  background-color: #585858;
+  height: 2.3em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.btnStyleDelete:hover {
+  background-color: white;
+  border: #585858 1px solid;
+  color: #585858;
+}
+
+.table{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width:70%;
+  vertical-align: middle;
+}
+
