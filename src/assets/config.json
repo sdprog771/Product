@@ -1,4 +1,4 @@
 {
-  "productsUrl": "http://localhost:8080/products",
+  "productsUrl": "http://localhost:8080/product/all",
   "categoriesUrl": "http://localhost:8080/categories"
 }

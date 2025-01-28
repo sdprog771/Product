@@ -4,6 +4,9 @@ import { MessageService } from "../message/message.service";
 import { Product } from "../model/Product";
 import {Observable, of} from "rxjs";
 import { catchError, tap } from 'rxjs/operators';
+import * as http from "http";
+import {error} from "@angular/compiler-cli/src/transformers/util";
+import {response} from "express";
 
 @Injectable({
   providedIn: 'root'
@@ -17,14 +20,14 @@ export class ProductService {
   private log(message: string) {
     this.messageService.add(`ProductService: ${message}`);
   }
-  prodUrl = "/products";
+  prodUrl = "/products/all";
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
   getProducts(): Observable <any> {
-    return this.httpClient.get(this.prodUrl).pipe(catchError(this.handleError<Product[]>('getProducts')));
+    return this.httpClient.get(this.prodUrl,this.httpOptions).pipe(catchError(this.handleError<Product[]>('getProducts')));
   }
 
   getProductById(id: string): Observable<any> {
