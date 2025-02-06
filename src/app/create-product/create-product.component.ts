@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Product} from "../model/Product";
-import { ProductService} from "../service/product.service";
+import { Product} from "../model/ProductInterface";
+import { ProductService} from "../productsService/product.service";
 
 @Component({
   selector: 'app-create-product',
@@ -10,20 +10,23 @@ import { ProductService} from "../service/product.service";
 export class CreateProductComponent {
 
   product: Product[] = [];
-  productService!: ProductService;
+
+  constructor(private productService: ProductService){}
 
   add(name: string, description: string, position: string): void {
     name = name.trim();
     description = description.trim();
     position = position.trim();
+
     if (!name) { return; }
+
     this.productService.addProduct({ name, description, position } as Product)
       .subscribe(product => {
         this.product.push(product);
       });
   }
-  save(): void {
 
+  save(): void {
   }
 
 

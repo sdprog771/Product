@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import {HttpClient, HttpContext, HttpHeaders, HttpParams} from "@angular/common/http";
 import { MessageService } from "../message/message.service";
-import { Product } from "../model/Product";
 import {Observable, of} from "rxjs";
 import { catchError, tap } from 'rxjs/operators';
-import * as http from "http";
-import {error} from "@angular/compiler-cli/src/transformers/util";
-import {response} from "express";
+import {GETALLPRODUCTSURL} from "../constants";
+import { Product} from "../model/ProductInterface";
 
 @Injectable({
   providedIn: 'root'
@@ -20,19 +18,23 @@ export class ProductService {
   private log(message: string) {
     this.messageService.add(`ProductService: ${message}`);
   }
-  prodUrl = "/products/all";
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
 
   getProducts(): Observable <any> {
-    return this.httpClient.get(this.prodUrl,this.httpOptions).pipe(catchError(this.handleError<Product[]>('getProducts')));
+    let headers: HttpHeaders = new HttpHeaders();
+    headers = headers.append('Content-Type', 'application/json');
+    //
+    // let params: HttpParams = new HttpParams();
+    // params = params.set('name', 'Ena onoma');
+
+    // return this.httpClient.get(this.prodUrl,{headers: headers, params: params, responseType: "json"})
+    return this.httpClient.get(GETALLPRODUCTSURL,{headers: headers, responseType: "json"})
+      .pipe(catchError(this.handleError<Product[]>('getProducts')));
   }
 
   getProductById(id: string): Observable<any> {
 
-    const prodUrlById = `${this.prodUrl}/${id}`;
+    const prodUrlById = `${GETALLPRODUCTSURL}/${id}`;
 
     return this.httpClient.get(prodUrlById)
                           .pipe(tap(_ => this.log(`fetched product id=${id}`)),
@@ -41,16 +43,30 @@ export class ProductService {
 
   updateProduct(product: Product): Observable<any> {
 
-    return this.httpClient.put(this.prodUrl,product,this.httpOptions)
+    let headers: HttpHeaders = new HttpHeaders();
+    headers = headers.append('Content-Type', 'application/json');
+
+    let params: HttpParams = new HttpParams();
+    params = params.set('name', 'Ena onoma');
+
+    return this.httpClient.put(GETALLPRODUCTSURL,product)
                           .pipe(tap(_ => this.log(`updated product id=`)),
                                 catchError(this.handleError<any>('updateProduct')));
   }
 
   addProduct(product: Product): Observable<Product> {
-    return this.httpClient.post<Product>(this.prodUrl, product, this.httpOptions)
-                          .pipe(tap((newProduct: Product) => this.log(`added product w/ id=`)),
-                                catchError(this.handleError<Product>('addProduct')));
+
+    let headers: HttpHeaders = new HttpHeaders();
+    headers = headers.append('Content-Type', 'application/json');
+
+    let params: HttpParams = new HttpParams();
+    params = params.set('name', 'Ena onoma');
+
+    return this.httpClient.post<Product>(GETALLPRODUCTSURL, product)
+                          .pipe(tap(data => this.log("data")),
+                            catchError(this.handleError<Product>('addProduct')));
   }
+
 
 
   private handleError<T>(operation = 'operation', result?: T) {

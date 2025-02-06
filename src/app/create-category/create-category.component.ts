@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Category} from "../model/Category";
+import { Category } from '../model/CategoryInterface';
 
 @Component({
   selector: 'app-create-category',
@@ -9,7 +9,7 @@ import {Category} from "../model/Category";
 export class CreateCategoryComponent {
 
   isModalVisible = false;
-  categoryList: Category[] = [];
+  categoryList: Category [] = [];
 
   showModal() {
     console.log(this.isModalVisible);
@@ -21,6 +21,10 @@ export class CreateCategoryComponent {
     console.log(this.isModalVisible);
     this.isModalVisible = false;
     console.log(this.isModalVisible);
+  }
+
+  onInit(): void{
+
   }
 
 

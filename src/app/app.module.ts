@@ -13,6 +13,7 @@ import { NewCategoryModalComponent } from './new-category-modal/new-category-mod
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { ResultsComponent } from './results/results.component';
+import { AppProductComponent } from './app-product/app-product.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,16 @@ import { ResultsComponent } from './results/results.component';
     HomePageComponent,
     FiltersComponent,
     NewCategoryModalComponent,
-    ResultsComponent
+    ResultsComponent,
+    AppProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    //HomePageComponent
   ],
   providers: [
     provideClientHydration()

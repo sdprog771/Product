@@ -1,15 +1,57 @@
-<div class="container">
-  <div>
-    <h1  class="text-center centerH1">Η αποθήκη μου</h1>
-    <input class="inputBar centerInput" type="search" placeholder="Αναζήτηση προϊόντος" aria-label="Search" #searchBox (keyup)="getSearchTokens(searchBox.value)">
-    <button class="btn btnStyle buttonRight" type="submit" data-bs-toggle="button" (click)="show()">Αναζήτηση</button>
+<!--<div class="container">-->
+<!--  <div>-->
+<!--    <h1  class="text-center centerH1">Η αποθήκη μου</h1>-->
+<!--    <input class="inputBar centerInput" type="search" placeholder="Αναζήτηση προϊόντος" aria-label="Search" #searchBox (keyup)="getSearchTokens(searchBox.value)">-->
+<!--    <button class="btn btnStyle buttonRight" type="submit" data-bs-toggle="button" (click)="show()">Αναζήτηση</button>-->
+<!--  </div>-->
+
+
+<!--<div class="container-fluid text-center mt-lg-5 centerLink">-->
+<!--  <a class="" routerLink="/filters">Αναζήτηση με φίλτρα</a>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="container" href="#">
+  <div class="col-4">
+  <h2 class="p-4 text-center">Η αποθήκη μου</h2>
+  <form>
+    <div class="form-group mb-3">
+      <label for="productFormControlInput">Προϊόν</label>
+      <input class="form-control inputBar mt-1" id="productFormControlInput" >
+    </div>
+    <div class="form-group mb-3">
+      <label for="exampleFormControlSelect1">Κατηγορία</label>
+      <select class="form-control inputBar mt-1" id="exampleFormControlSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group mt-1">
+      <label for="storageTextarea">Θέση αποθήκευσης</label>
+      <textarea class="form-control inputBar mt-1" id="storageTextarea" rows="1"></textarea>
+    </div>
+    <button type="submit" class="btn btnStyle mt-3 mb-2">Αναζήτηση</button>
+  </form>
+    </div>
+  <div class="col-8">
+    <form>
+      <ul>
+        @for(product of products; track product.id) {
+        <li>
+        <app-app-product  [product]="product"></app-app-product>
+        </li>
+        }
+<!--        <li *ngFor="let product of products">product</li>-->
+<!--        <li *ngFor="let product of products"><app-app-product  [product]="product"></app-app-product></li>-->
+      </ul>
+    </form>
   </div>
+</div>
 
 
-<div class="container-fluid text-center mt-lg-5 centerLink">
-  <a class="" routerLink="/filters">Αναζήτηση με φίλτρα</a>
-</div>
-</div>
 
 
 
