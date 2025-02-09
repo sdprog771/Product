@@ -15,7 +15,7 @@
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
   max-width: 500px;
   width: 100%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -35,4 +35,17 @@
   background-color: white;
   border: #4c9696 2px solid;
   color: #4c9696;
+}
+
+.modalFormat {
+  margin-right: 35%;
+  margin-left: 35%;
+}
+
+.labelFormat{
+  text-align: left;
+}
+
+.modalHeader{
+  font-weight: bold;
 }

@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Product} from "../model/ProductInterface";
 import { ProductService} from "../productsService/product.service";
+import {Category} from "../model/CategoryInterface";
+import {CATEGORY_DUMMY} from "../model/CategoryDummy";
 
 @Component({
   selector: 'app-create-product',
   templateUrl: './create-product.component.html',
   styleUrl: './create-product.component.css'
 })
-export class CreateProductComponent {
+export class CreateProductComponent implements OnInit {
 
   product: Product[] = [];
+  categoryList: Category [] = [];
 
   constructor(private productService: ProductService){}
 
@@ -28,6 +31,8 @@ export class CreateProductComponent {
 
   save(): void {
   }
-
+  ngOnInit(): void {
+    this.categoryList = CATEGORY_DUMMY;
+  }
 
 }

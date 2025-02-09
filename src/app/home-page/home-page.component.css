@@ -41,6 +41,16 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.headerStorage{
+  /*padding: 0.5em;*/
+  margin-top:2rem;
+  margin-bottom: 2rem;
+}
+
+.headerList{
+  margin-top:2rem;
+  margin-bottom: 2rem;
+}
 
 .h1{
   font-family: "Arial Rounded MT Bold";
@@ -73,7 +83,7 @@
 }
 
 .inputBar{
-  width: 40%;
+  width: 80%;
   border-radius: 0.4em;
   border-color: #4c9696;
   height: 2.3em;
@@ -81,5 +91,12 @@
 
 tr:nth-child(even) {
   background-color: lightgrey;
+}
+
+.productListFormat{
+  padding: 0rem;
+}
+.productListFormat:hover{
+  background-color: #e8e8e8;
 }
 

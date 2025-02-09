@@ -1,11 +1,32 @@
-<div class="container justify-content-center w-50" >
-<h2 class="p-4 text-center">Κατηγορίες προϊόντων</h2>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item" *ngFor="let categoryItem of categoryList">Κωδικός: {{categoryItem.id}} - Κατηγορία: {{categoryItem.name}}</li>
-</ul>
-  <button type="button" class="btn btnStyle mt-3 mb-2" data-toggle="modal" data-target="#newCategoryModal" (click)="showModal()">Νέα κατηγορία</button>
-  <app-new-category-modal *ngIf="isModalVisible" (close)="hideModal()"></app-new-category-modal>
+<div class="container justify-content-center w-75">
+  <h2 class="p-4 text-center">Κατηγορίες προϊόντων</h2>
+  <button type="button" class="btn btnStyle mt-2 mb-4" data-toggle="modal" data-target="#newCategoryModal"
+          (click)="showNewModal()">+ Νέα κατηγορία
+  </button>
+  <app-new-category-modal *ngIf="isModalVisible" (close)="hideNewModal()"></app-new-category-modal>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col" class="col-2">Κωδικός</th>
+      <th scope="col" class="col-7">Κατηγορία</th>
+      <th scope="col" class="col-1 tdFormat"></th>
+      <th scope="col" class="col-1 tdFormat"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr scope="row" *ngFor="let categoryItem of categoryList">
+      <td class="col-2 tdFormat">{{categoryItem.id}}</td>
+      <td class="col-5 tdFormat">{{categoryItem.name}}</td>
+      <td class="col-2 tdFormatButtons">
+        <button type="button" class="btn btnStyle" data-toggle="modal" data-target="#editCategoryModal"
+                (click)="showEditModal()">Επεξεργασία
+        </button>
+      </td>
+      <td class="col-2 tdFormatButtons">
+        <button type="button" class="btn btnStyle">Διαγραφή</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <app-edit-category-modal *ngIf="isEditModalVisible" (close)="hideEditModal()"></app-edit-category-modal>
 </div>
-
-
-

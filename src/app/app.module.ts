@@ -8,12 +8,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { FiltersComponent } from './filters/filters.component';
 import { NewCategoryModalComponent } from './new-category-modal/new-category-modal.component';
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { ResultsComponent } from './results/results.component';
 import { AppProductComponent } from './app-product/app-product.component';
+import { EditCategoryModalComponent } from './edit-category-modal/edit-category-modal.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +22,10 @@ import { AppProductComponent } from './app-product/app-product.component';
     CreateProductComponent,
     CreateCategoryComponent,
     HomePageComponent,
-    FiltersComponent,
     NewCategoryModalComponent,
     ResultsComponent,
-    AppProductComponent
+    AppProductComponent,
+    EditCategoryModalComponent
   ],
   imports: [
     BrowserModule,

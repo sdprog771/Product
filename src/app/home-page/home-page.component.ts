@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import { ProductService } from "../productsService/product.service";
 import { AppProductComponent} from "../app-product/app-product.component";
 import { PRODUCT_DUMMY } from "../model/ProductDummy";
-import { NgFor } from "@angular/common";
+import {CATEGORY_DUMMY} from "../model/CategoryDummy";
 
 @Component({
   selector: 'app-home-page',
@@ -12,6 +12,7 @@ import { NgFor } from "@angular/common";
 export class HomePageComponent {
   searchTokens: string[] = [];
   products = PRODUCT_DUMMY;
+  categoryList = CATEGORY_DUMMY;
   hasTokens = false;
 
   constructor(private productService: ProductService) {
