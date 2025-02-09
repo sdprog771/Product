@@ -1,0 +1,19 @@
+<div class="modal-overlay" id="editCategoryModal" tabindex="-1" role="dialog" aria-labelledby="editCategoryModalLabel" aria-hidden="true">
+  <div class="modal-dialog w-50 modal-dialog-centered modalFormat" role="document">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h4 class="modal-title mb-3 modalHeader" id="editCategoryModalLabel">Επεξεργασία</h4>
+      </div>
+      <div class="modal-body">
+        <label class="fw-bold labelFormat">Κωδικός</label>
+        <input class="form-control mt-2 mb-2" id="editCategoryInputCode"/>
+        <label class="fw-bold labelFormat">Κατηγορία</label>
+        <input class="form-control mt-2 mb-2" id="editCategoryInputName"/>
+      </div>
+      <div class="modal-footer mt-3">
+        <button type="button" class="btn btn-secondary mx-3" data-dismiss="modal" (click)="closeEditCategoryModal()">Κλείσιμο</button>
+        <button type="button" class="btn btnStyle" (click)="saveChanges()">Αποθήκευση</button>
+      </div>
+    </div>
+  </div>
+</div>

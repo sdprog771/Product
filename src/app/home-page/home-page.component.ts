@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import { ProductService } from "../productsService/product.service";
-import { AppProductComponent} from "../app-product/app-product.component";
 import { PRODUCT_DUMMY } from "../model/ProductDummy";
 import {CATEGORY_DUMMY} from "../model/CategoryDummy";
 
